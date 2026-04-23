@@ -74,9 +74,20 @@ const CocktailList = () => {
         Resultados ({state.cocktails.length})
       </Typography>
 
-      <Grid container spacing={3}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: {
+            xs: '1fr',            // 1 card por linha (celular)
+            sm: 'repeat(2, 1fr)', // 2 cards idênticos por linha (tablet)
+            md: 'repeat(3, 1fr)', // 3 cards idênticos por linha (monitor)
+          },
+          gap: '24px', // Espaçamento entre os cards
+          alignItems: 'stretch', // Garante que todos estiquem para a mesma altura
+        }}
+      >
         {state.cocktails.map((cocktail) => (
-          <Grid item xs={12} sm={6} md={4} key={cocktail.idDrink}>
+          <Box key={cocktail.idDrink} sx={{ minWidth: 0 }}>
             <Card
               sx={{
                 height: '100%',
@@ -116,7 +127,7 @@ const CocktailList = () => {
                   },
                 }}
               >
-                {/* Nome do Coquetel */}
+                {/* Nome do Coquetel com quebra de texto forçada caso seja muito longo */}
                 <Typography
                   variant="h6"
                   component="h3"
@@ -126,62 +137,18 @@ const CocktailList = () => {
                     color: '#222',
                     fontSize: '18px',
                     lineHeight: '1.3',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap', // Impede que nomes longos quebrem o card
                   }}
                 >
                   {cocktail.strDrink}
                 </Typography>
-
-                {/* Categoria */}
-                {cocktail.strCategory && (
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: '#666',
-                      marginBottom: '12px',
-                      fontSize: '14px',
-                    }}
-                  >
-                    Categoria: <strong>{cocktail.strCategory}</strong>
-                  </Typography>
-                )}
-
-                {/* Tipo de Bebida */}
-                {cocktail.strAlcoholic && (
-                  <Stack direction="row" spacing={1} sx={{ marginBottom: '12px' }}>
-                    <Chip
-                      label={cocktail.strAlcoholic}
-                      size="small"
-                      variant="outlined"
-                      sx={{
-                        borderColor: '#999',
-                        color: '#333',
-                        fontSize: '12px',
-                        '& .MuiChip-label': {
-                          padding: '4px 8px',
-                        },
-                      }}
-                    />
-                  </Stack>
-                )}
-
-                {/* Copo/Vidro */}
-                {cocktail.strGlass && (
-                  <Typography
-                    variant="caption"
-                    sx={{
-                      color: '#999',
-                      display: 'block',
-                      fontSize: '12px',
-                    }}
-                  >
-                    Vidro: {cocktail.strGlass}
-                  </Typography>
-                )}
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 };
