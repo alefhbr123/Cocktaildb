@@ -144,6 +144,53 @@ const CocktailList = () => {
                 >
                   {cocktail.strDrink}
                 </Typography>
+                
+                {/* Categoria */}
+                {cocktail.strCategory && (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: '#666',
+                      marginBottom: '12px',
+                      fontSize: '14px',
+                    }}
+                  >
+                    Categoria: <strong>{cocktail.strCategory}</strong>
+                  </Typography>
+                )}
+
+                {/* Tipo de Bebida */}
+                {cocktail.strAlcoholic && (
+                  <Stack direction="row" spacing={1} sx={{ marginBottom: '12px' }}>
+                    <Chip
+                      label={cocktail.strAlcoholic}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        borderColor: '#999',
+                        color: '#333',
+                        fontSize: '12px',
+                        '& .MuiChip-label': {
+                          padding: '4px 8px',
+                        },
+                      }}
+                    />
+                  </Stack>
+                )}
+
+                {/* Copo/Vidro */}
+                {cocktail.strGlass && (
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: '#999',
+                      display: 'block',
+                      fontSize: '12px',
+                    }}
+                  >
+                    Vidro: {cocktail.strGlass}
+                  </Typography>
+                )}
               </CardContent>
             </Card>
           </Box>
