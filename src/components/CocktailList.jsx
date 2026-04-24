@@ -16,6 +16,9 @@ import { useCocktail } from '../contexts/CocktailContext';
 const CocktailList = () => {
   const { state } = useCocktail();
 
+  // Garantir que cocktails seja sempre um array
+  const cocktails = Array.isArray(state.cocktails) ? state.cocktails : [];
+
   // Se estiver carregando, mostrar spinner
   if (state.loading) {
     return (
@@ -33,7 +36,7 @@ const CocktailList = () => {
   }
 
   // Se não há resultados para exibir
-  if (state.cocktails.length === 0) {
+  if (cocktails.length === 0) {
     return (
       <Paper
         elevation={0}
@@ -43,6 +46,11 @@ const CocktailList = () => {
           borderRadius: '4px',
           padding: '40px 24px',
           textAlign: 'center',
+          minHeight: '200px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <Typography
@@ -53,7 +61,7 @@ const CocktailList = () => {
           }}
         >
           {state.error
-            ? 'Nenhum resultado encontrado. Tente outro termo de busca.'
+            ? state.error
             : 'Digite um termo e clique em "Buscar" para começar.'}
         </Typography>
       </Paper>
@@ -71,7 +79,7 @@ const CocktailList = () => {
           fontWeight: 600,
         }}
       >
-        Resultados ({state.cocktails.length})
+        Resultados ({cocktails.length})
       </Typography>
 
       <Box
@@ -86,7 +94,7 @@ const CocktailList = () => {
           alignItems: 'stretch', // Garante que todos estiquem para a mesma altura
         }}
       >
-        {state.cocktails.map((cocktail) => (
+        {cocktails.map((cocktail) => (
           <Box key={cocktail.idDrink} sx={{ minWidth: 0 }}>
             <Card
               sx={{

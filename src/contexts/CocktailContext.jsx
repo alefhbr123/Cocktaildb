@@ -115,6 +115,8 @@ export const CocktailProvider = ({ children }) => {
         url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(
           searchTerm
         )}`;
+      } else {
+        throw new Error('Tipo de busca inválido');
       }
 
       const response = await fetch(url);
@@ -125,15 +127,24 @@ export const CocktailProvider = ({ children }) => {
 
       const data = await response.json();
 
-      if (!data.drinks || data.drinks === null) {
+      // Normalizar a resposta: drinks pode ser null, undefined, ou []
+      const drinks = data?.drinks;
+      const hasDrinks = Array.isArray(drinks) && drinks.length > 0;
+
+      if (!hasDrinks) {
+        const errorMessage = 
+          searchType === 'ingredient'
+            ? `Nenhum coquetel encontrado com o ingrediente "${searchTerm}". Tente outro ingrediente!`
+            : `Nenhum coquetel encontrado com o nome "${searchTerm}".`;
+        
         dispatch({
           type: ACTIONS.FETCH_ERROR,
-          payload: `Nenhum coquetel encontrado com o termo "${searchTerm}".`,
+          payload: errorMessage,
         });
       } else {
         dispatch({
           type: ACTIONS.FETCH_SUCCESS,
-          payload: data.drinks,
+          payload: drinks,
         });
       }
     } catch (err) {
