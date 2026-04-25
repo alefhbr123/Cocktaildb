@@ -1,4 +1,4 @@
-# TheCocktailDB Frontend - SPA React.js
+# TheCocktailDB
 
 ![React](https://img.shields.io/badge/React-18.2.0-61dafb?style=flat-square&logo=react)
 ![Material-UI](https://img.shields.io/badge/Material--UI-5.14.0-007fff?style=flat-square&logo=mui)
@@ -228,28 +228,10 @@ Este projeto atende aos seguintes critérios da avaliação acadêmica:
 
 ---
 
-## 📧 Autor
+## 📧 Autores
 
-**[INSIRA SEU NOME AQUI]**
-
-- 🔗 GitHub: [@[SEU_USUARIO]](https://github.com/[SEU_USUARIO])
-- 💼 LinkedIn: [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
-- 📧 Email: seu.email@example.com
-
+**2576147 - Álefh Trindade Luz De Lima**
+**2576198 - Fábio Massashi Suzuki**
 ---
 
-## 📄 Licença
-
-Este projeto está licenciado sob a **ISC License** — consulte o arquivo `LICENSE` para mais detalhes.
-
----
-
-## 🙏 Agradecimentos
-
-- [TheCocktailDB](https://www.thecocktaildb.com/) — API pública de coquetéis
-- [Material-UI](https://mui.com/) — Componentes e design system
-- [React.js](https://react.dev/) — Framework JavaScript
-
----
-
-**Desenvolvido com ❤️ como trabalho acadêmico em Programação Web Fullstack**
+**Desenvolvido como trabalho acadêmico em Programação Web Fullstack**
