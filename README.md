@@ -107,7 +107,7 @@ O projeto foi desenvolvido como trabalho acadêmico para a disciplina **Programa
 
 ```bash
 git clone https://github.com/alefhbr123/Cocktaildb
-cd cocktaildb-frontend
+cd Cocktaildb
 ```
 
 2. **Instale as dependências:**
@@ -127,7 +127,7 @@ src/
 │   ├── SearchBar.jsx
 │   ├── CocktailList.jsx
 │   └── ErrorMessage.jsx
-└── index.js
+└── main.jsx
 ```
 
 ### Scripts Disponíveis
@@ -170,11 +170,12 @@ cocktaildb-frontend/
 │   │   ├── SearchBar.jsx            # Formulário de busca com validação
 │   │   ├── CocktailList.jsx         # Grid de cards dos coquetéis
 │   │   └── ErrorMessage.jsx         # Snackbar de erros da API
-│   └── index.js                     # Entry point
-├── public/
-│   └── index.html                   # Template HTML
+│   └── main.jsx                     # Entry point
 ├── package.json                     # Dependências e scripts
+├── index.html                       # Template HTML
 ├── .gitignore                       # Arquivos ignorados pelo Git
+├── vercel.json                      # Configuração do Vercel
+├── vite.config.js                   # Configuração do Vite
 └── README.md                        # Este arquivo
 ```
 
@@ -198,7 +199,9 @@ Este projeto atende aos seguintes critérios da avaliação acadêmica:
 ## 📧 Autores
 
 **2576147 - Álefh Trindade Luz De Lima**
+
 **2576198 - Fábio Massashi Suzuki**
+
 ---
 
 **Desenvolvido como trabalho acadêmico em Programação Web Fullstack**
