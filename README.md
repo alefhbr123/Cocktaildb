@@ -2,8 +2,6 @@
 
 ![React](https://img.shields.io/badge/React-18.2.0-61dafb?style=flat-square&logo=react)
 ![Material-UI](https://img.shields.io/badge/Material--UI-5.14.0-007fff?style=flat-square&logo=mui)
-![Webpack](https://img.shields.io/badge/Webpack-5.89.0-8dd6f9?style=flat-square&logo=webpack)
-![Babel](https://img.shields.io/badge/Babel-7.23.0-f9dc3e?style=flat-square&logo=babel)
 ![Node.js](https://img.shields.io/badge/Node.js-16%2B-339933?style=flat-square&logo=node.js)
 ![License](https://img.shields.io/badge/License-ISC-blue?style=flat-square)
 
