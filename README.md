@@ -34,8 +34,6 @@ O projeto foi desenvolvido como trabalho acadêmico para a disciplina **Programa
 |---|---|---|
 | **React.js** | 18.2.0 | Framework moderno para construir UIs reativas com componentes reutilizáveis |
 | **Material-UI (MUI)** | 5.14.0 | Design system profissional com componentes pré-estilizados e tema customizável |
-| **Webpack** | 5.89.0 | Bundler robusto para modularização e otimização de assets |
-| **Babel** | 7.23.0 | Transpilador para suportar JSX e JavaScript moderno (ES6+) |
 | **Context API** | nativa | Alternativa leve ao Redux para gerenciamento de estado global |
 | **useReducer Hook** | nativa | Padrão de state management previsível e escalável |
 | **Fetch API** | nativa | Requisições HTTP nativas sem dependências adicionais |
