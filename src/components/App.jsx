@@ -11,7 +11,7 @@ import SearchBar from './SearchBar';
 import CocktailList from './CocktailList';
 import ErrorMessage from './ErrorMessage';
 
-// Tema Tech-Clean customizado
+// Tema customizado
 const theme = createTheme({
   palette: {
     primary: {
