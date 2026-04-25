@@ -17,14 +17,14 @@ O projeto foi desenvolvido como trabalho acadêmico para a disciplina **Programa
 
 ## ✨ Funcionalidades
 
-- 🔍 **Busca Dinâmica** — Pesquise coquetéis por nome ou ingrediente em tempo real
-- ✅ **Validação de Formulário** — Validação de campos obrigatórios com mensagens de erro claras
-- 📊 **Grid Responsivo** — Exibição de resultados em layout adaptável (mobile, tablet, desktop)
-- 🎨 **Design Tech-Clean** — Interface minimalista e acadêmica com Material-UI
-- ⚠️ **Feedback de Erro** — Mensagens de validação (antes) e de erro da API (depois)
-- 🔄 **Gerenciamento de Estado** — Context API + useReducer para controle centralizado
-- 📱 **Totalmente Responsiva** — Funciona perfeitamente em todos os dispositivos
-- ⚡ **Performance Otimizada** — Webpack configurado para development e production
+-  **Busca Dinâmica** — Pesquise coquetéis por nome ou ingrediente em tempo real
+-  **Validação de Formulário** — Validação de campos obrigatórios com mensagens de erro claras
+-  **Grid Responsivo** — Exibição de resultados em layout adaptável (mobile, tablet, desktop)
+-  **Design Tech-Clean** — Interface minimalista e acadêmica com Material-UI
+-  **Feedback de Erro** — Mensagens de validação (antes) e de erro da API (depois)
+-  **Gerenciamento de Estado** — Context API + useReducer para controle centralizado
+-  **Totalmente Responsiva** — Funciona perfeitamente em todos os dispositivos
+-  **Performance Otimizada** — Webpack configurado para development e production
 
 ---
 
@@ -108,7 +108,7 @@ O projeto foi desenvolvido como trabalho acadêmico para a disciplina **Programa
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/[SEU_USUARIO]/cocktaildb-frontend.git
+git clone https://github.com/alefhbr123/Cocktaildb
 cd cocktaildb-frontend
 ```
 
@@ -152,22 +152,13 @@ npm run dev
 npm install
 
 # 2. Inicie o servidor de desenvolvimento
-npm start
+npm run dev
 
 # 3. Abra seu navegador e acesse:
 # http://localhost:3000
 ```
 
-### Build para Produção
 
-```bash
-npm run build
-
-# Os arquivos compilados estarão em ./dist/
-# Deploy o conteúdo da pasta dist/ em seu servidor web
-```
-
----
 
 ## 📁 Estrutura do Projeto
 
@@ -184,8 +175,6 @@ cocktaildb-frontend/
 │   └── index.js                     # Entry point
 ├── public/
 │   └── index.html                   # Template HTML
-├── webpack.config.js                # Configuração do Webpack
-├── .babelrc                         # Configuração do Babel
 ├── package.json                     # Dependências e scripts
 ├── .gitignore                       # Arquivos ignorados pelo Git
 └── README.md                        # Este arquivo
@@ -204,25 +193,7 @@ Este projeto atende aos seguintes critérios da avaliação acadêmica:
 - ✅ **Context API + Reducer** — Gerenciamento centralizado de estado
 - ✅ **Hook useReducer** — Implementado no CocktailContext
 - ✅ **Material-UI** — Design system profissional e responsivo
-- ✅ **Webpack** — Configurado para development e production
 - ✅ **Git** — Commits incrementais a cada fase
-
----
-
-## 🗺️ Roadmap / Próximos Passos
-
-### Melhorias Futuras Possíveis
-
-- [ ] **Detalhes do Coquetel** — Modal ou página interna mostrando ingredientes e modo de preparo completo
-- [ ] **Favoritos** — Salvar coquetéis favoritos em localStorage
-- [ ] **Histórico de Buscas** — Manter registro das últimas buscas realizadas
-- [ ] **Dark Mode** — Tema escuro alternativo com switch no header
-- [ ] **Filtros Avançados** — Filtrar por categoria, tipo de álcool, vidro
-- [ ] **Paginação** — Dividir resultados em páginas (se muitos coquetéis)
-- [ ] **React Router** — Roteamento real para diferentes views (caso necessário)
-- [ ] **Testes Unitários** — Jest + React Testing Library
-- [ ] **PWA** — Suporte offline com Service Workers
-- [ ] **API Cache** — Implementar cache client-side para respostas da API
 
 ---
 
